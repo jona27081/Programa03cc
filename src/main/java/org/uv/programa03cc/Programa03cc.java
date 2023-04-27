@@ -5,6 +5,9 @@
 
 package org.uv.programa03cc;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author zS20006736
@@ -12,21 +15,6 @@ package org.uv.programa03cc;
 public class Programa03cc {
 
     public static void main(String[] args) {
-        //mensajeAbstracto ma=null;
-        
-        //ma= new MensajeSaludo();
-        //ma.msg();
-        
-        //ma = new MensajeDespedida();
-        //ma.msg();
-        
-        //ma = new mensajeAbstracto() {
-         //   @Override
-          //  public void msg() {
-            //    System.out.println("otro...");
-            //}
-        //};
-        //ma.msg();
         
         IMensaje ma = null;
         
@@ -40,7 +28,7 @@ public class Programa03cc {
         ma = new IMensaje() {
             @Override
             public void msg() {
-                System.out.println("otro...");            
+                Logger.getLogger(Programa03cc.class.getName()).log(Level.INFO, "Otro...");   
             }
         };
         ma.msg();

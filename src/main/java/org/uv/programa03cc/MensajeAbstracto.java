@@ -4,12 +4,19 @@
  */
 package org.uv.programa03cc;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author zS20006736
  */
-public class mensajeConcreta {
+public abstract class MensajeAbstracto {
+    
+    
     public void imprimir(){
-        System.out.println("Hola mundo concreto");
+        Logger.getLogger(MensajeAbstracto.class.getName()).log(Level.INFO, "Hola mundo abstracto");   
     }
+    
+    public abstract void msg();
 }

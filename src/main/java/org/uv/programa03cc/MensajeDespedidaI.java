@@ -4,6 +4,9 @@
  */
 package org.uv.programa03cc;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author zS20006736
@@ -12,7 +15,7 @@ public class MensajeDespedidaI implements IMensaje{
 
     @Override
     public void msg() {
-        System.out.println("Adios desde interface");    
+        Logger.getLogger(MensajeDespedidaI.class.getName()).log(Level.INFO, "Adios desde inteface");   
     }
     
 }
